@@ -1,0 +1,22 @@
+.navigation_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_links ul {
+  display: flex;
+}
+.nav_links ul li {
+  margin: 0.5rem;
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+.about_image {
+  display: block;
+  margin: auto;
+  width: 30rem;
+}
