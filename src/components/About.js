@@ -1,14 +1,18 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import './components.css';
 import { Link } from 'react-router-dom';
+import {Sections} from "./styles/Sections";
+import Button from "react-bootstrap/Button"
 
 function About() {
   return (
+    <Sections>
     <div className="about_wrapper">
-      <img
-        className="about_image"
-        src="https://i.pinimg.com/originals/d6/95/67/d695675a0106b28412a16fdbcffdbaa7.jpg"
-      />
+      <center>
+      <iframe src="https://giphy.com/embed/SabSYEpsVh0di" width="480" height="206" frameBorder="0"allowFullScreen></iframe><p><a href="https://giphy.com/gifs/thinking-SabSYEpsVh0di"></a></p>
+      </center>
+    
 
       <div>
         <h3>
@@ -33,13 +37,16 @@ function About() {
           What are you waiting for then? Join in and find your best study
           partner.
         </h2>
-        <button>
-          <Link className="link" to="login">
-            SignUp
+         <center>
+         <Link className="link" to="login">
+          <Button size="lg" style={{alignItem:"center"}}variant="success">SignUp</Button>
           </Link>
-        </button>
+         </center>
+        
+       
       </div>
     </div>
+    </Sections>
   );
 }
 

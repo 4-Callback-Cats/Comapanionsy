@@ -1,4 +1,5 @@
-import Navigation from './components/Navigation';
+/* eslint-disable prettier/prettier */
+import Header from './components/Header';
 import About from './components/About';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -7,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navigation />
+        <Header />
         <Switch>
           <Route path="/" exact component={About} />
           {/* <Route path="/home" exact component={Home} /> */}
