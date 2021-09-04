@@ -1,10 +1,10 @@
 import React from 'react';
 import { useAuth } from '../lib/auth';
-import { Sections } from "./styles/Sections";
-import Button from "react-bootstrap/button";
-
+import { Sections } from './styles/Sections';
 
 import './components.css';
+import { Button } from 'react-bootstrap';
+
 function Login() {
   const auth = useAuth();
   return (
@@ -25,9 +25,13 @@ function Login() {
           <h1>Login Page</h1>
           {!auth?.user ? (
             <div mt="4" alignItems="center">
-
-              <Button onClick={() => auth.signinWithGoogle()} variant="outline-dark" size="lg">Sign In with Google</Button>
-
+              <Button
+                onClick={() => auth.signinWithGoogle()}
+                variant="outline-dark"
+                size="lg"
+              >
+                Sign In with Google
+              </Button>
             </div>
           ) : (
             <div>
@@ -41,7 +45,6 @@ function Login() {
           )}
         </Sections>
       </main>
-
     </div>
   );
 }

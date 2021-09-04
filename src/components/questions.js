@@ -43,15 +43,15 @@ let questions = [
   },
   {
     q: 'What are your interests apart from the skill you want to learn?',
-    options: [],
+    options: [''],
   },
   {
     q: 'Something else you would like your study partner to have.',
-    options: [],
+    options: [''],
   },
   {
     q: 'Would you mind having a study partner of the opposite gender?',
-    options: [],
+    options: [''],
   },
 ];
 
