@@ -20,3 +20,17 @@
   margin: auto;
   width: 30rem;
 }
+
+.loginDiv {
+  text-align: center;
+}
+
+.footerWrapper {
+  background-color: #ffc947;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
