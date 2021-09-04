@@ -1,6 +1,6 @@
-import React from 'react';
-import './components.css';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./components.css";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -21,7 +21,7 @@ function About() {
           anxious about the fomo they create?
         </h4>
         <h2>Worry not!</h2>
-        <h4>You have landed on the right place.</h4>
+        <h4>You've landed on the right place.</h4>
         <p>
           <strong>Studinder</strong> is an app for you to choose your partners
           according to YOUR abilities and YOUR learning goals. Just fill in your
@@ -33,11 +33,14 @@ function About() {
           What are you waiting for then? Join in and find your best study
           partner.
         </h2>
-        <button>
-          <Link className="link" to="login">
-            SignUp
-          </Link>
-        </button>
+
+        <div className="loginDiv">
+          <button>
+            <Link className="link login" to="login">
+              Login
+            </Link>
+          </button>
+        </div>
       </div>
     </div>
   );
