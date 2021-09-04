@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import About from './components/About';
 import Login from './components/Login';
 import { ProvideAuth } from './lib/auth';
+import YourProfile from './components/YourProfile';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
             <Route path="/" exact component={About} />
             {/* <Route path="/home" exact component={Home} /> */}
             <Route path="/login" exact component={Login} />
-            {/* <Route path="/profile" exact component={Profile} /> */}
+            <Route path="/profile" exact component={YourProfile} />
           </Switch>
         </div>
       </ProvideAuth>
