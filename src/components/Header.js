@@ -18,9 +18,9 @@ function Header() {
     <Container>
     <Navbar.Brand href="#home">Studinder</Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link><Link to="/Home" style={{ textDecoration: 'none' }}>Home</Link></Nav.Link>
-      <Nav.Link to="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Nav.Link><Link to="/" style={{ textDecoration: 'none' }}>Home</Link></Nav.Link>
+      <Nav.Link><Link to="/login" style={{ textDecoration: 'none' }}>Login</Link></Nav.Link>
+      <Nav.Link><Link to="/meet-people" style={{ textDecoration: 'none' }}>Meet People</Link></Nav.Link>
     </Nav>
     </Container>
   </Navbar>

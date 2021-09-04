@@ -1,5 +1,8 @@
 import React from 'react';
 import { useAuth } from '../lib/auth';
+import { Sections } from "./styles/Sections";
+import Button from "react-bootstrap/button";
+
 
 import './components.css';
 function Login() {
@@ -18,24 +21,27 @@ function Login() {
         />
       </head>
       <main style={{ textAlign: 'center', margin: '8px' }}>
-        <h2>Login Page</h2>
-        {!auth?.user ? (
-          <div mt="4" alignItems="center">
-            <button onClick={() => auth.signinWithGoogle()}>
-              Sign In with Google
-            </button>
-          </div>
-        ) : (
-          <div>
-            <h3>{`Hello, ${auth?.user.name}`}</h3>
-            <div>
-              {`Email: ${auth?.user.email}   `}
-              <img src={auth?.user.photoUrl} />
+        <Sections>
+          <h1>Login Page</h1>
+          {!auth?.user ? (
+            <div mt="4" alignItems="center">
+
+              <Button onClick={() => auth.signinWithGoogle()} variant="outline-dark" size="lg">Sign In with Google</Button>
+
             </div>
-            <button onClick={() => auth.signout()}>Sign Out</button>
-          </div>
-        )}
+          ) : (
+            <div>
+              <h3>{`Hello, ${auth?.user.name}`}</h3>
+              <div>
+                {`Email: ${auth?.user.email}   `}
+                <img src={auth?.user.photoUrl} />
+              </div>
+              <button onClick={() => auth.signout()}>Sign Out</button>
+            </div>
+          )}
+        </Sections>
       </main>
+
     </div>
   );
 }

@@ -2,15 +2,20 @@
 import React from "react";
 import { Container } from 'react-bootstrap';
 import CardItem from "./Card";
-import contacts from "../contacts";
+import contacts from "./contacts";
+import { CardStyle } from "../styles/Card";
 const Profile = () => {
   return (
-    <Container className="main-profile-cont">
-      {contacts.map(({ name, text }) => {
+    <CardStyle>
+      {contacts.map(({ name, text, id }) => {
         return (
-          <CardItem name={name} text={text} />);
+
+          <CardItem key={id} name={name} text={text} />
+
+        );
+
       })}
-    </Container>
+    </CardStyle>
   );
 
 }
