@@ -1,11 +1,11 @@
-import React  from 'react';
+import React from 'react';
 import { useAuth } from '../lib/auth';
 import { Sections } from './styles/Sections';
-
+import Card from 'react-bootstrap/Card';
 import './components.css';
 import { Button } from 'react-bootstrap';
 
-function Login() {  
+function Login() {
   const auth = useAuth();
 
 
@@ -36,20 +36,27 @@ function Login() {
               </Button>
             </div>
           ) : (
-            <div>
-              <h3>{`Hello, ${auth?.user.name}`}</h3>
-              <div>
-                {`Email: ${auth?.user.email}   `}
-                <img src={auth?.user.photoUrl} />
-              </div>
-              <Button
-                variant="outline-light"
-                size="lg"
-                onClick={() => auth.signout()}
-              >
-                Sign Out
-              </Button>
-            </div>
+
+            <center style={{ margin: "2rem 2rem" }}>
+              <Card border="warning" style={{ width: '18rem' }}>
+                <Card.Header> {`Email: ${auth?.user.email}   `}</Card.Header>
+                <Card.Body>
+                  <Card.Title>{`Hello, ${auth?.user.name}`}</Card.Title>
+                  <Card.Text>
+                    <img src={auth?.user.photoUrl}  alt="profile-pic" style={{borderRadius:"50%",display:"flex",alignItems:"center"}}/>
+                    <Button
+                      variant="outline-dark"
+                      size="lg"
+                      onClick={() => auth.signout()}
+                      style={{margin:"0.5rem 0.5rem"}}
+                    >
+                      Sign Out
+                    </Button>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </center>
+
           )}
         </Sections>
       </main>

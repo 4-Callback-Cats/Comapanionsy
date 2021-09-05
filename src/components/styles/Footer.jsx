@@ -2,6 +2,7 @@
 import styled from "styled-components";
 
 
+
 export const FooterStyle = styled.div`
 padding: 3% 5%;
 background-color:#FFBF00;
