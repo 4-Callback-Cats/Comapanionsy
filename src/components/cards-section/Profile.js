@@ -23,7 +23,7 @@ const Profile = () => {
         <CardStyle>
           {contacts.map((person) => {
             return (
-              <CardItem key={person.uid} name={person.name} text={person.bio} />
+              <CardItem key={person.uid} name={person.name} text={person.bio} gender={person.gender} domain={person.domain} image={person.photoUrl} bio={person.bio} />
             );
           })}
         </CardStyle>

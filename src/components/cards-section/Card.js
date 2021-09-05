@@ -9,7 +9,13 @@ const CardItem = (props) => {
     >
       <Card.Header>{props.name}</Card.Header>
       <Card.Body>
-        <Card.Text>{props.text}</Card.Text>
+
+        <center><img src={props.image} alt="profile-pic" style={{ borderRadius: "50%", display: "flex", alignItems: "center", margin: "1rem 1rem" }} /></center>
+
+        <strong><Card.Text>{props.domain}</Card.Text></strong>
+        <Card.Text>{props.gender}</Card.Text>
+        <Card.Text>{props.bio}</Card.Text>
+    
         <Button
           style={{
             alignItem: 'center',
