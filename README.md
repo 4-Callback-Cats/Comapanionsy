@@ -1,9 +1,5 @@
-# Callback-Cats-Prototype
-BlueLearn Hackathon Team - Callback Cats
-
 # Comapanionsy
-### Project Name
-
+BlueLearn Hackathon Team - **Callback Cats**
 
 ## About the Project:
 Are you overwhelmed and anxious about the boost of community based courses and get into FOMO of others achievements?
@@ -32,9 +28,8 @@ Interesting right? Dive in then!
 </div>
 
 ## Steps for installation
-### `clone this repo - git clone <url>`
-### `run on your local sever ( you must have installed node in your system )`
-### `npm / yarn start`
+#### `clone this repo - git clone <url>`
+#### `npm / yarn start`
 
 ## App/Web link if hosted (recommended but optional)
 
