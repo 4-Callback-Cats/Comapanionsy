@@ -1,53 +1,81 @@
+import { Formik } from 'formik';
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import questions from './questions';
+import { mcqQuestions, textQuestions } from './questions';
 import { Sections } from './styles/Sections';
 
 function QuestionCard() {
   const formRef = useRef();
-  console.log(questions);
   return (
     <Sections>
       <div className="mx-4 questionCardWrapper">
-        <Form
-          ref={formRef}
-          onSubmit={(e) => {
-            e.preventDefault();
-            console.log(formRef);
+        <Formik
+          initialValues={{
+            username: '',
           }}
         >
-          {questions.map((que, index) => {
-            return (
-              <>
-                <h4>{que.q}</h4>
-                <Form.Group controlId={`form-${index}`}>
-                  {que.options.map((option, ind) => {
-                    return option ? (
+          {({
+            handleSubmit,
+            handleChange,
+            handleBlur,
+            values,
+            touched,
+            isValid,
+            errors,
+          }) => (
+            <Form
+              onSubmit={(e) => {
+                e.preventDefault();
+                console.log(values);
+              }}
+            >
+              {mcqQuestions.map((que, index) => {
+                return (
+                  <Form.Group controlId={`form-${index}`} key={`form-${index}`}>
+                    <Form.Label as="h3">{que.q}</Form.Label>
+                    {que.options.map((option, ind) => (
                       <Form.Check
-                        key={ind}
+                        key={`inline-radio-${index}-${ind}`}
+                        name={`inline-radio-${index}}`}
+                        required
                         inline
+                        onChange={handleChange}
                         label={`${option}`}
-                        name="group1"
+                        value={`${option}`}
                         type={'radio'}
-                        id={`inline-radio-${ind}`}
+                        id={`inline-radio-${index}-${ind}`}
                       />
-                    ) : (
-                      <Form.Control
-                        key={ind}
-                        as="textarea"
-                        defaultValue={option}
-                        rows={3}
-                        id={`textarea-${ind}`}
-                      />
-                    );
-                  })}
+                    ))}
+                  </Form.Group>
+                );
+              })}
+              {textQuestions.map((que, index) => (
+                <Form.Group controlId={`form-${index}`} key={`form-${index}`}>
+                  <Form.Label as="h3">{que.q}</Form.Label>
+                  {que.options.map((option, ind) => (
+                    <Form.Control
+                      key={`textarea-${index}-${ind}`}
+                      name={`textarea-${index}-${ind}`}
+                      as="textarea"
+                      onChange={handleChange}
+                      defaultValue={option}
+                      rows={3}
+                      id={`textarea-${index}-${ind}`}
+                    />
+                  ))}
                 </Form.Group>
-              </>
-            );
-          })}
-          <Button as="input" type="submit" value="Submit" />
-          <Button as="input" type="reset" value="Reset" />
-        </Form>
+              ))}
+
+              <Button
+                className="mx-2 my-2"
+                as="input"
+                type="submit"
+                value="Submit"
+              />
+              <Button className="my-2" as="input" type="reset" value="Reset" />
+            </Form>
+          )}
+        </Formik>
       </div>
     </Sections>
   );

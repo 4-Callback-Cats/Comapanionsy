@@ -1,4 +1,4 @@
-let questions = [
+export const mcqQuestions = [
   {
     q: 'What is your age?',
     options: ['below 15', '15-17', '17-19', '20-22', 'above 22'],
@@ -41,6 +41,9 @@ let questions = [
       "I'm just exploring and trying to learn something new",
     ],
   },
+];
+
+export const textQuestions = [
   {
     q: 'What are your interests apart from the skill you want to learn?',
     options: [''],
@@ -54,5 +57,3 @@ let questions = [
     options: [''],
   },
 ];
-
-export default questions;
