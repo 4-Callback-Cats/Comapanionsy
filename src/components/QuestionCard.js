@@ -1,53 +1,90 @@
+import { render } from '@testing-library/react';
+import { Toast } from 'bootstrap';
+import { Formik } from 'formik';
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import questions from './questions';
+import { useAuth } from '../lib/auth';
+import { updateProfile } from '../lib/database';
+import { mcqQuestions, textQuestions } from './questions';
 import { Sections } from './styles/Sections';
 
 function QuestionCard() {
-  const formRef = useRef();
-  console.log(questions);
+  const auth = useAuth();
+  const handleUserProfileSubmit = async (values) => {
+    values.uid = auth.user.uid;
+    await updateProfile(auth?.user?.uid, values);
+    alert('Your profile was updated successfully');
+  };
   return (
     <Sections>
       <div className="mx-4 questionCardWrapper">
-        <Form
-          ref={formRef}
-          onSubmit={(e) => {
-            e.preventDefault();
-            console.log(formRef);
+        <Formik
+          initialValues={{
+            uid: '',
           }}
         >
-          {questions.map((que, index) => {
-            return (
-              <>
-                <h4>{que.q}</h4>
-                <Form.Group controlId={`form-${index}`}>
-                  {que.options.map((option, ind) => {
-                    return option ? (
+          {({
+            handleSubmit,
+            handleChange,
+            handleBlur,
+            values,
+            touched,
+            isValid,
+            errors,
+          }) => (
+            <Form
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleUserProfileSubmit(values);
+              }}
+            >
+              {mcqQuestions.map((que, index) => {
+                return (
+                  <Form.Group controlId={que.id} key={que.id}>
+                    <Form.Label as="h3">{que.q}</Form.Label>
+                    {que.options.map((option, ind) => (
                       <Form.Check
-                        key={ind}
+                        key={`${que.id}-${ind}`}
+                        name={que.id}
+                        required
                         inline
+                        onChange={handleChange}
                         label={`${option}`}
-                        name="group1"
+                        value={`${option}`}
                         type={'radio'}
-                        id={`inline-radio-${ind}`}
+                        id={que.id}
                       />
-                    ) : (
-                      <Form.Control
-                        key={ind}
-                        as="textarea"
-                        defaultValue={option}
-                        rows={3}
-                        id={`textarea-${ind}`}
-                      />
-                    );
-                  })}
+                    ))}
+                  </Form.Group>
+                );
+              })}
+              {textQuestions.map((que, index) => (
+                <Form.Group controlId={que.id} key={que.id}>
+                  <Form.Label as="h3">{que.q}</Form.Label>
+                  {que.options.map((option, ind) => (
+                    <Form.Control
+                      key={`${que.id}-${ind}`}
+                      name={que.id}
+                      as="textarea"
+                      onChange={handleChange}
+                      defaultValue={option}
+                      rows={3}
+                      id={que.id}
+                    />
+                  ))}
                 </Form.Group>
-              </>
-            );
-          })}
-          <Button as="input" type="submit" value="Submit" />
-          <Button as="input" type="reset" value="Reset" />
-        </Form>
+              ))}
+
+              <Button
+                className="mx-2 my-2"
+                as="input"
+                type="submit"
+                value="Submit"
+              />
+              <Button className="my-2" as="input" type="reset" value="Reset" />
+            </Form>
+          )}
+        </Formik>
       </div>
     </Sections>
   );
