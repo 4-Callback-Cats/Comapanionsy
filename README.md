@@ -32,11 +32,9 @@ Interesting right? Dive in then!
 </div>
 
 ## Steps for installation
-1. clone this repo - git clone <url>
-2. run on your local sever ( you must have installed node in your system )
-
-  
-*yarn/npm start 
+### `clone this repo - git clone <url>`
+### `run on your local sever ( you must have installed node in your system )`
+### `npm / yarn start`
 
 ## App/Web link if hosted (recommended but optional)
 
