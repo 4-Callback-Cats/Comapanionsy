@@ -13,9 +13,8 @@ const CardItem = (props) => {
         <Card.Text>
           {props.text}
         </Card.Text>
-        <Button style={{ 
-          alignItem: "center",  
-          background: '#ff5632', 
+        <Button variant="danger" style={{ 
+          alignItem: "center",   
           margin: '1rem', 
           border: '2px' ,
           }}>Approach</Button>
