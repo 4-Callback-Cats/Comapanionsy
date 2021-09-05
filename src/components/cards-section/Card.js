@@ -13,9 +13,14 @@ const CardItem = (props) => {
         <Card.Text>
           {props.text}
         </Card.Text>
+<<<<<<< HEAD
         <Button style={{ 
           alignItem: "center",  
           background: '#DC143C', 
+=======
+        <Button variant="danger" style={{ 
+          alignItem: "center",   
+>>>>>>> c80df8450408547464513873585d5e007c3b918d
           margin: '1rem', 
           border: '2px' ,
           }}>Approach</Button>
