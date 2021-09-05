@@ -40,7 +40,13 @@ function Login() {
                 {`Email: ${auth?.user.email}   `}
                 <img src={auth?.user.photoUrl} />
               </div>
-              <button onClick={() => auth.signout()}>Sign Out</button>
+              <Button
+                variant="outline-light"
+                size="lg"
+                onClick={() => auth.signout()}
+              >
+                Sign Out
+              </Button>
             </div>
           )}
         </Sections>

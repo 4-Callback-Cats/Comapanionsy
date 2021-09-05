@@ -1,17 +1,26 @@
+import { render } from '@testing-library/react';
+import { Toast } from 'bootstrap';
 import { Formik } from 'formik';
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useAuth } from '../lib/auth';
+import { updateProfile } from '../lib/database';
 import { mcqQuestions, textQuestions } from './questions';
 import { Sections } from './styles/Sections';
 
 function QuestionCard() {
-  const formRef = useRef();
+  const auth = useAuth();
+  const handleUserProfileSubmit = async (values) => {
+    values.uid = auth.user.uid;
+    await updateProfile(auth?.user?.uid, values);
+    alert('Your profile was updated successfully');
+  };
   return (
     <Sections>
       <div className="mx-4 questionCardWrapper">
         <Formik
           initialValues={{
-            username: '',
+            uid: '',
           }}
         >
           {({
@@ -26,41 +35,41 @@ function QuestionCard() {
             <Form
               onSubmit={(e) => {
                 e.preventDefault();
-                console.log(values);
+                handleUserProfileSubmit(values);
               }}
             >
               {mcqQuestions.map((que, index) => {
                 return (
-                  <Form.Group controlId={`form-${index}`} key={`form-${index}`}>
+                  <Form.Group controlId={que.id} key={que.id}>
                     <Form.Label as="h3">{que.q}</Form.Label>
                     {que.options.map((option, ind) => (
                       <Form.Check
-                        key={`inline-radio-${index}-${ind}`}
-                        name={`inline-radio-${index}}`}
+                        key={`${que.id}-${ind}`}
+                        name={que.id}
                         required
                         inline
                         onChange={handleChange}
                         label={`${option}`}
                         value={`${option}`}
                         type={'radio'}
-                        id={`inline-radio-${index}-${ind}`}
+                        id={que.id}
                       />
                     ))}
                   </Form.Group>
                 );
               })}
               {textQuestions.map((que, index) => (
-                <Form.Group controlId={`form-${index}`} key={`form-${index}`}>
+                <Form.Group controlId={que.id} key={que.id}>
                   <Form.Label as="h3">{que.q}</Form.Label>
                   {que.options.map((option, ind) => (
                     <Form.Control
-                      key={`textarea-${index}-${ind}`}
-                      name={`textarea-${index}-${ind}`}
+                      key={`${que.id}-${ind}`}
+                      name={que.id}
                       as="textarea"
                       onChange={handleChange}
                       defaultValue={option}
                       rows={3}
-                      id={`textarea-${index}-${ind}`}
+                      id={que.id}
                     />
                   ))}
                 </Form.Group>
