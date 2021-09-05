@@ -1,6 +1,4 @@
 body {
-  background-image: url("cool-background.svg");
-  background-size: cover;
   font-family: 'Balsamiq Sans', cursive;
   min-height:100vh; margin:0; position:relative
 }
