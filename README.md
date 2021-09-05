@@ -1,22 +1,29 @@
 # Callback-Cats-Prototype
 BlueLearn Hackathon Team - Callback Cats
+
 # Project Name
+Comapanionsy
+
+
+
 
 ## Aboout the Project
-// here goes a short description
+Comapanionsy let you find your study partner and gives you the best resource to learn any skill.
 
 ## Technologies used
-// list of technologies, frameworks, libraries, opensource code with links
+React, Bootstrap, Formik
 
 ## Steps for installation
-// step by step procedure with prequisiites for installation of the product 
-on a local enviornment
+1. clone this repo - git clone <url>
+2. run on your local sever ( you must have installed node in your system )
+
+  
+*yarn/npm start 
 
 ## App/Web link if hosted (recommended but optional)
 
 ## Video Demo (Mandatory)
-// link of video demo. you can upload video on google drive. Make sure that
-video is accessible for anyone with the link.
+
 
 ## Screenshots (Mandatory)
 // Screenshots regarding your project. you can provide a drive folder link with
