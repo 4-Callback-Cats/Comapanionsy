@@ -53,5 +53,20 @@ Therefore using dummy data.
 The matching of profiles will be based on matches in the answer, the implementation of which wasn't possible due to lack of time.
 
 ## Screenshots (Mandatory)
-// Screenshots regarding your project. you can provide a drive folder link with
-screenshots or upload it on github itself.
+
+`/`
+
+![home](https://user-images.githubusercontent.com/36930635/132126157-00386b79-70ee-4e90-82f2-0476cfaebdd9.png)
+
+`/login`
+
+![login](https://user-images.githubusercontent.com/36930635/132126166-4644f857-e615-40dc-abc4-dd1f04374c5a.png)
+
+`/profile`
+
+![profile](https://user-images.githubusercontent.com/36930635/132126168-a36e654a-35c5-4dd8-9ec5-8e01448daddc.png)
+
+`/meet-people`
+
+![meet-people](https://user-images.githubusercontent.com/36930635/132126403-d5a1eae3-5ed4-4a8d-95b2-45823a615de6.png)
+
