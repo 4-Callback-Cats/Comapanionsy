@@ -38,10 +38,7 @@ function Login() {
           ) : (
             <div>
               <h3>{`Hello, ${auth?.user.name}`}</h3>
-              <div>
-                {`Email: ${auth?.user.email}   `}
-                <img src={auth?.user.photoUrl} />
-              </div>
+              <div></div>
               <Button
                 variant="outline-light"
                 size="lg"
