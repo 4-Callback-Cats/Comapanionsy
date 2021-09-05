@@ -107,7 +107,12 @@
 .startbtn:hover {
   background: var(--primary);
   border: 2px solid var(--secondry);
+ 
+}
+.startbtn:hover #loginbtnlink{
+  
   color: var(--secondry);
+ 
 }
 
 #loginbtnlink {

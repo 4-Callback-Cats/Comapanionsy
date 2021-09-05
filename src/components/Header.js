@@ -13,7 +13,7 @@ function Header() {
   return (
     <Navbar id="nav-bar">
       <Container>
-        <Navbar.Brand href="#home">Studinder</Navbar.Brand>
+        <Navbar.Brand style={{fontWeight: 'bold', color: 'white', border: '2px solid white', padding: '5px'}} href="#home">Comapanionsy</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link>
             <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
