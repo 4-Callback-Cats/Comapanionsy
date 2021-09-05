@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import CardItem from './Card';
-import contacts from './contacts';
 import { CardStyle } from '../styles/Card';
-const Profile = () => {
+import { getAllProfiles } from '../../lib/database';
+
+const Profile = async () => {
+  const contacts = await getAllProfiles();
+  console.log(contacts);
+
   return (
     <CardStyle>
-      {contacts.map(({ name, text, id }) => {
-        return <CardItem key={id} name={name} text={text} />;
+      {contacts.map((person) => {
+        return (
+          <CardItem key={person.uid} name={person.name} text={person.bio} />
+        );
       })}
     </CardStyle>
   );
