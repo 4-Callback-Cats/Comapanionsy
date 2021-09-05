@@ -40,6 +40,17 @@ Interesting right? Dive in then!
 
 ## Video Demo (Mandatory)
 
+## Flow of the app
+
+The user lands on the landing page. Reads about the product and heads over to sign Up.
+After signing in through google auth, the user is asked a few questions to let us find a good match.
+After he answers the questions, he is redirected to the `feed` page, where he 
+can choose among the available profiles.
+
+Currently, we are saving all the userData in the firebase database. But facing an issue in fetching and rendering the data. 
+Therefore using dummy data.
+
+The matching of profiles will be based on matches in the answer, the implementation of which wasn't possible due to lack of time.
 
 ## Screenshots (Mandatory)
 // Screenshots regarding your project. you can provide a drive folder link with
