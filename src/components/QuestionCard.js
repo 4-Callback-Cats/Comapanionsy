@@ -16,7 +16,7 @@ function QuestionCard() {
     alert('Your profile was updated successfully');
   };
   return (
-    <Sections>
+   
       <div className="mx-4 questionCardWrapper">
         <Formik
           initialValues={{
@@ -86,7 +86,7 @@ function QuestionCard() {
           )}
         </Formik>
       </div>
-    </Sections>
+   
   );
 }
 
