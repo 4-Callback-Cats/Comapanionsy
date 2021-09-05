@@ -1,6 +1,15 @@
 # Comapanionsy
 BlueLearn Hackathon Team - **Callback Cats**
 
+## Problem statement: Organised learning.
+
+Team:
+1. Kartik P
+2. Rajit K
+3. Aditya S
+4. Shubham H
+
+
 ## About the Project:
 Are you overwhelmed and anxious about the boost of community based courses and get into FOMO of others achievements?
 Worry not! 
@@ -34,7 +43,7 @@ Interesting right? Dive in then!
 ## App/Web link if hosted (recommended but optional)
 
 ## Video Demo (Mandatory)
-https://drive.google.com/file/d/13yrRxlzVUh-EANF41CIlggZIblQidFru/view?usp=sharing
+
 ## Flow of the app
 
 The user lands on the landing page. Reads about the product and heads over to sign Up.
@@ -47,6 +56,7 @@ Therefore using dummy data.
 
 The matching of profiles will be based on matches in the answer, the implementation of which wasn't possible due to lack of time.
 
+We further plan to provide popular resources to learn according to the skills they want to learn.
 ## Screenshots (Mandatory)
 
 `/`
