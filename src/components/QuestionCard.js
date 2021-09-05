@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable prettier/prettier */
 import { render } from '@testing-library/react';
 import { Toast } from 'bootstrap';
 import { Formik } from 'formik';
