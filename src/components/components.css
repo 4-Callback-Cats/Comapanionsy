@@ -136,7 +136,7 @@
 .studytogether {
   display: flex;
   flex-direction: row;
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -160,4 +160,38 @@
     font-weight: 500;
     text-transform: capitalize;
     color: var(--secondry);
+}
+
+
+/* section three styles */
+
+
+.resource-cont {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+#resourceimg {
+  width: 300px;
+  height: 400px;
+  margin-left: 10rem;
+  margin-right: 0.3rem;
+}
+
+.section-three-cont p {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--secondry);
+}
+.section-three-cont h2 {
+  font-size: 1.8rem;
+    font-weight: 600;
+    font-family: Helvetica, sans-serif;
+    color: var(--primary);
+    text-transform: capitalize;
 }

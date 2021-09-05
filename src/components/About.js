@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import './components.css';
@@ -44,6 +45,19 @@ function About() {
           </p>
         </Col>
       </Container>
+      <Container className="resource-cont">
+        
+        <Col className="section-three-cont">
+          <h2>Don't worry we'll provide you<br/>the best resource availabe on the web</h2>
+          <p>
+            you'll get 100% free and best course by top faculties and reviewed by lakhs of students around the globe, with a perfect roadmap of your goal.
+          </p>
+        </Col>
+        <Col>
+          <img id="resourceimg" src="./resource.svg" alt="" />
+        </Col>
+      </Container>
+
     </>
   );
 }
