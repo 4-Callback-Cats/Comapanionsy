@@ -1,3 +1,15 @@
+
+
+
+:root{
+  --primary: #ff5632;
+  --secondry: #2b2727;
+  --poppins: 'Poppins'
+}
+
+
+
+
 .navigation_wrapper {
   display: flex;
   justify-content: space-between;
@@ -26,11 +38,23 @@
 }
 
 .footerWrapper {
-  background-color: #ffc947;
+  background-color: var(--secondry);
   text-align: center;
   margin: 1rem;
   padding: 1rem;
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+#nav-bar {
+  background: var(--primary);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+#loginbtn {
+  background: var(--primary);
+  border: 2px solid var(--secondry);
+
 }

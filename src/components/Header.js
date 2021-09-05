@@ -11,28 +11,28 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar id="nav-bar">
       <Container>
         <Navbar.Brand href="#home">Studinder</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
               Home
             </Link>
           </Nav.Link>
           <Nav.Link>
-            <Link to="/login" style={{ textDecoration: 'none' }}>
+            <Link to="/login" style={{ textDecoration: 'none', color: 'white'}}>
               Login
             </Link>
           </Nav.Link>
           <Nav.Link>
-            <Link to="/profile" style={{ textDecoration: 'none' }}>
+            <Link to="/profile" style={{ textDecoration: 'none', color: 'white' }}>
               Profile
             </Link>
           </Nav.Link>
           <Nav.Link>
-            <Link to="/meet-people" style={{ textDecoration: 'none' }}>
-              Meet People
+            <Link to="/meet-people" style={{ textDecoration: 'none', color: 'white' }}>
+              Find Mate
             </Link>
           </Nav.Link>
         </Nav>

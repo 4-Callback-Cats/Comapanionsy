@@ -1,12 +1,14 @@
-import React from 'react';
+import React  from 'react';
 import { useAuth } from '../lib/auth';
 import { Sections } from './styles/Sections';
 
 import './components.css';
 import { Button } from 'react-bootstrap';
 
-function Login() {
+function Login() {  
   const auth = useAuth();
+
+
   return (
     <div>
       <head>

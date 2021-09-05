@@ -1,10 +1,10 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Header from './components/Header';
-import About from './components/About';
-import Login from './components/Login';
-import { ProvideAuth } from './lib/auth';
-import YourProfile from './components/YourProfile';
+import Header from "./components/Header";
+import About from "./components/About";
+import Login from "./components/Login";
+import { ProvideAuth } from "./lib/auth";
+import YourProfile from "./components/YourProfile";
 import Footer from "./components/Footer";
 import Profile from "./components/cards-section/Profile";
 

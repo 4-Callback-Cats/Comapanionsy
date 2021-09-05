@@ -18,7 +18,7 @@ function About() {
           <iframe src="https://giphy.com/embed/SabSYEpsVh0di" width="480" height="206" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/thinking-SabSYEpsVh0di"></a></p>
         </center>
 
-
+        
         <div>
           <h3>
             Want to start learning a new skill, but not sure where to start and
@@ -51,7 +51,7 @@ function About() {
           <center>
             <section id="home">
             <Link className="link" to="login">
-            <Button size="lg" style={{ alignItem: "center" }} variant="success">
+            <Button size="lg" style={{ alignItem: "center",  background: '#ff5632', margin: '1rem', border: 'none' }}>
             <Link to="/login" style={{ textDecoration: 'none',color: "white" }}>SignUp</Link>
             </Button>
             </Link>
