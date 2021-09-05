@@ -19,6 +19,6 @@ export const updateProfile = (uid, data) => {
 
 export const getAllProfiles = async () => {
   const querySnapshot = await getDocs(collection(firestore, 'form'));
-  const formList = querySnapshot.docs.map((doc) => doc.data());
+  const formList = await querySnapshot.docs.map((doc) => doc.data());
   return formList;
 };

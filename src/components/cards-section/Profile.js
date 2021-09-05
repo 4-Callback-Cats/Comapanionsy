@@ -3,19 +3,32 @@ import { Container } from 'react-bootstrap';
 import CardItem from './Card';
 import { CardStyle } from '../styles/Card';
 import { getAllProfiles } from '../../lib/database';
+import { Button } from 'react-bootstrap';
 
-const Profile = async () => {
-  const contacts = await getAllProfiles();
-  console.log(contacts);
-
+const Profile = () => {
+  const [contacts, setContacts] = useState();
   return (
-    <CardStyle>
-      {contacts.map((person) => {
-        return (
-          <CardItem key={person.uid} name={person.name} text={person.bio} />
-        );
-      })}
-    </CardStyle>
+    <>
+      {!contacts ? (
+        <div className="mx-auto text-center my-5">
+          <Button
+            onClick={() => {
+              getAllProfiles().then((a) => setContacts(a));
+            }}
+          >
+            Meet new people!
+          </Button>
+        </div>
+      ) : (
+        <CardStyle>
+          {contacts.map((person) => {
+            return (
+              <CardItem key={person.uid} name={person.name} text={person.bio} />
+            );
+          })}
+        </CardStyle>
+      )}
+    </>
   );
 };
 
