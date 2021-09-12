@@ -40,9 +40,9 @@ Interesting right? Dive in then!
 #### `clone this repo - git clone <url>`
 #### `npm / yarn start`
 
-## App/Web link if hosted (recommended but optional)
+## App/Web link if hosted
 ### https://callback-cats-6b1da.web.app/
-## Video Demo (Mandatory)
+## Video Demo 
 ### https://drive.google.com/file/d/13yrRxlzVUh-EANF41CIlggZIblQidFru/view?usp=sharing
 
 ## Flow of the app
@@ -58,7 +58,7 @@ Therefore using dummy data.
 The matching of profiles will be based on matches in the answer, the implementation of which wasn't possible due to lack of time.
 
 We further plan to provide popular resources to learn according to the skills they want to learn.
-## Screenshots (Mandatory)
+## Screenshots
 
 `/`
 
